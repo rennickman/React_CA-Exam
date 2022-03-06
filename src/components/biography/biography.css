@@ -1,9 +1,11 @@
+/* Outer Container */
 .biography {
     color: white;
     background: #1c2237;
     border-bottom: 1px solid white;
 }
 
+/* Biography Container */
 .biography_container {
     padding-top: 30px;
     display: flex;
@@ -18,6 +20,7 @@
     justify-content: center;
 }
 
+/* Stylings for container when in read more mode */
 .biography_container_readmode {
     display: flex;
     flex-direction: column;
@@ -32,6 +35,7 @@
     justify-content: center;
 }
 
+/* Stylings for Rows where the image is on the left*/
 .biography_row_image_first {
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
@@ -39,6 +43,7 @@
     grid-template-areas: "col2 col1";
 }
 
+/* Stylings for Rows where the image is on the right */
 .biography_row_image_last {
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
@@ -46,6 +51,7 @@
     grid-template-areas: "col1 col2";
 }
 
+/* Adding some responsive design for columns */
 @media screen and (max-width: 800px) {
    .biography_row_image_first {
        grid-template-areas: "col2" "col1";
@@ -65,25 +71,28 @@
     }
 }
 
-
+/* Column with Headings and button */
 .biography_info_col {
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
 }
 
+/* Column with Image */
 .biography_image_col {
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
 }
 
+/* Seaction with headings */
 .biography_info_section {
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
 }
 
+/* Dates */
 .biography_info_dates {
     font-size: 16px;
     line-height: 16px;
@@ -92,6 +101,7 @@
     margin-bottom: 16px;
 }
 
+/* name */
 .biography_info_name {
     margin-bottom: 24px;
     font-size: 48px;
@@ -99,6 +109,7 @@
     font-weight: 600;
 }
 
+/* First paragraph when not in read more mode */
 .biography_info_intro {
     max-width: 440px;
     margin-bottom: 35px;
@@ -106,6 +117,7 @@
     line-height: 24px;
 }
 
+/* Hide first paragraph in read more mode */
 .biography_info_intro_hidden {
     max-width: 440px;
     margin-bottom: 35px;
@@ -114,6 +126,7 @@
     display: none;
 }
 
+/* Image of Legend */
 .biography_image {
     object-fit: cover;
     width: 325px;
@@ -124,6 +137,7 @@
     margin-top: 15px;
 }
 
+/* Read more button */
 .biography_button {
     margin-top: 30px;
     padding: 8px 20px;
@@ -142,18 +156,21 @@
     width: 200px;
 }
 
+/* Hover effects for button */
 .biography_button:hover {
     transition: all 0.3s ease-out;
     background: #fff;
     color: #242424;
 }
 
+/* Paragraphs Section*/
 .biography_read_section {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
+/* Paragraph */
 .biography_paragraph {
     margin-bottom: 25px;
     font-size: 18px;
