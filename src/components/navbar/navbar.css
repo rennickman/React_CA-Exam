@@ -1,0 +1,192 @@
+/*Outer Container*/
+.navbar {
+    background: #1c2237;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Navbar Container */
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/* Container Styles */
+.container {
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* Logo Container */
+.navbar_logo {
+    color: #fff;
+    justify-self: start;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Fingerprint Icon */
+.navbar_icon {
+    margin-right: 0.5rem;
+    cursor: default;
+}
+
+
+/* Container for different Options */
+.navbar_options {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    justify-content: end;
+}
+
+/* Container for each container */
+.navbar_option_container {
+    height: 80px;
+    border-bottom: 2px solid transparent;
+}
+
+/* Creates an effect under each container when hovered over */
+.navbar_option_container:hover {
+    border-bottom: 2px solid #f00946;
+}
+
+/* Stylings for the options */
+.navbar_option {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Styling for the random button */
+.random_option_button {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 1.2rem;
+}
+
+/* Hover effect for the random button */
+.random_option_button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+}
+
+.navbar_toggle_icon2 {
+    color: white;
+}
+
+.navbar_toggle {
+    display: none;
+}
+
+
+/* CSS settings for smaller screens */
+@media screen and (max-width: 960px) {
+
+    .navbar_container {
+        position: relative;
+    }
+    
+    .navbar_options {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .navbar_options.active {
+        background: #1c2237;
+        left: 0;
+        opacity: 1;
+        transition: all 0.6s ease;
+        z-index: 1;
+        justify-content: center; 
+    }
+
+    .navbar_option {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar_option:hover {
+        color: #f00946;
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .navbar_option_container:hover {
+        border: none;
+    }
+
+    .navbar_option_container {
+        width: 100%;
+    }
+
+    .navbar_logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+        cursor: pointer;
+    }
+
+    .navbar_toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .navbar_random_option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+
+    .navbar_toggle_icon1 {
+        color: #fff;
+        font-size: 2rem;
+    }
+}
