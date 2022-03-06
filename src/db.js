@@ -2,7 +2,7 @@ export const famousPeopleDB = [
     {
         name: "Bram Stoker",
         dates: "1847-1912",
-        sex: "male",
+        gender: "male",
         image: "images/BramStoker.jpeg",
         info: [
             "Abraham, or Bram, Stoker is most famous for writing the Gothic horror novel Dracula. But did you know that he also wrote romance novels? Or that he was bedridden as a child?",
@@ -15,7 +15,7 @@ export const famousPeopleDB = [
     {
         name: "Anne Bonny",
         dates: "Circa 1698",
-        sex: "female",
+        gender: "female",
         image: "images/AnneBonny.jpeg",
         info: [
             "Anne Cormac, aka Anne Bonny, was a notoriously ruthless pirate who pillaged merchant ships in the Caribbean.",
@@ -30,7 +30,7 @@ export const famousPeopleDB = [
     {
         name: "Sir Charles Parsons",
         dates: "1854-1931",
-        sex: "male",
+        gender: "male",
         image: "images/SirCharlesParsons.jpeg",
         info: [
             "Charles Parsons was the son of the peer of Offaly, the Earl of Rosse, who was a famous astronomer and builder of the 'Leviathan', which was at that time, the largest telescope in the world. It can still be visited at their family home at Birr Castle.",
@@ -43,7 +43,7 @@ export const famousPeopleDB = [
     {
         name: "Dame Jocelyn Bell Burnell",
         dates: "1943-Present",
-        sex: "female",
+        gender: "female",
         image: "images/DameJocelynBellBurnell.jpeg",
         info: [
             "As an astrophysicist, Jocelyn Bell Burnell, is best known for her discovery of the first radio pulsars while still a student.",
@@ -58,7 +58,7 @@ export const famousPeopleDB = [
     {
         name: "Ernerst Shackleton",
         dates: "1874-1922",
-        sex: "male",
+        gender: "male",
         image: "images/ErnestShackleton.jpeg",
         info: [
             "Born in Kildare and educated in London, Ernest Shackleton developed a passion for adventure by reading books as a child. At just 16, he became a ship’s apprentice and quickly rose through the ranks.",

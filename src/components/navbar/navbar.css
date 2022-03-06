@@ -16,10 +16,6 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
-}
-
-/* Container Styles */
-.container {
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -28,6 +24,7 @@
     padding-right: 50px;
     padding-left: 50px;
 }
+
 
 /* Logo Container */
 .navbar_logo {
@@ -64,7 +61,7 @@
 
 /* Creates an effect under each container when hovered over */
 .navbar_option_container:hover {
-    border-bottom: 2px solid #f00946;
+    border-bottom: 2px solid white;
 }
 
 /* Stylings for the options */
@@ -76,6 +73,25 @@
     padding: 0.5rem 1rem;
     height: 100%;
     cursor: pointer;
+}
+
+.navbar_search_container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar_input {
+    height: 2.1rem;
+    width: 300px;
+    border: none;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 35px;
+    outline: none;
 }
 
 /* Styling for the random button */
@@ -101,22 +117,22 @@
     color: #242424;
 }
 
+/* Open Menu Icon */
 .navbar_toggle_icon2 {
     color: white;
 }
 
+/* Menu Icon Container */
 .navbar_toggle {
     display: none;
 }
 
 
-/* CSS settings for smaller screens */
-@media screen and (max-width: 960px) {
 
-    .navbar_container {
-        position: relative;
-    }
+/* CSS settings for Mobile */
+@media screen and (max-width: 985px) {
     
+    /* Container for the different options */
     .navbar_options {
         display: flex;
         flex-direction: column;
@@ -127,17 +143,19 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        justify-content: center; 
     }
 
+    /* SHowing options container when menu is open */
     .navbar_options.active {
         background: #1c2237;
         left: 0;
         opacity: 1;
         transition: all 0.6s ease;
         z-index: 1;
-        justify-content: center; 
     }
 
+    /* Navbar Option */
     .navbar_option {
         text-align: center;
         padding: 2rem;
@@ -145,20 +163,29 @@
         display: table;
     }
 
+    .navbar_search_container {
+        justify-content: center;
+    }
+
+
+    /* Navbar Option hover effects in menu */
     .navbar_option:hover {
         color: #f00946;
         transform: scale(1.2);
         transition: all 0.3s ease;
     }
 
+    /* Hiding border on option container when hovered over */
     .navbar_option_container:hover {
         border: none;
     }
 
+    /* Container for each option */
     .navbar_option_container {
         width: 100%;
     }
 
+    /* Navbar logo */
     .navbar_logo {
         position: absolute;
         top: 0;
@@ -167,6 +194,7 @@
         cursor: pointer;
     }
 
+    /* Menu Icon Container */
     .navbar_toggle {
         display: block;
         position: absolute;
@@ -177,6 +205,7 @@
         cursor: pointer;
     }
 
+    /* Random button stylings for menu mode */
     .navbar_random_option {
         display: flex;
         justify-content: center;
@@ -185,6 +214,7 @@
         height: 120px;
     }
 
+    /* Close Menu Icon */
     .navbar_toggle_icon1 {
         color: #fff;
         font-size: 2rem;

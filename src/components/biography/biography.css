@@ -1,19 +1,117 @@
 .biography {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
-    margin: 20px;
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 30px;
+    color: white;
+    background: #1c2237;
+    border-bottom: 1px solid white;
 }
 
-.bioImage {
+.biography_container {
+    display: grid;
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
+    justify-content: center;
+}
+
+.biography_row_image_first {
+    display: grid;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: "col1 col2";
+
+    @media screen and (max-width: 768px) {
+            grid-template-areas: imgStart ? `'col1' 'col2'`;
+    }
+}
+
+.biography_row_image_last {
+    display: grid;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: "col2 col1";
+
+    @media screen and (max-width: 768px) {
+            grid-template-areas: imgStart ? `'col1' 'col2'`;
+    }
+}
+
+
+.biography_info_col {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+}
+
+.biography_image_col {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
+}
+
+.biography_info_section {
+    max-width: 540px;
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+.biography_info_dates {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+}
+
+.biography_info_name {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.biography_info_intro {
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.biography_image_container {
+    
+}
+
+.biography_image {
     object-fit: cover;
     width: 350px;
     height: 400px;
     border-radius: 25px;
-    border: 1px grey solid;
+    border: 1px solid white;
     padding: 5px;
+}
+
+.biography_button {
+    margin-top: 30px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid white;
+    transition: all 0.3s ease-out;
+    font-size: 1.2rem;
+    width: 200px;
+}
+
+.biography_button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
 }
