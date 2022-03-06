@@ -35,16 +35,14 @@ const Navbar = ({ handleAll, handleRandom, handleGender, name, setName, handleSe
                     LEGENDS
                 </div>
 
-                {/* Toggle Button */}
+                {/* Menu Toggle Icons */}
                 <div className="navbar_toggle" onClick={handleToggle}>
                     {toggle ? <FaTimes className='navbar_toggle_icon1' /> : <FaBars className='navbar_toggle_icon2' />}
                 </div>
 
                 
-            
-
-                {/* Filtering Options */}
                 <ul className={toggle ? "navbar_options active" : "navbar_options"}>
+                    {/* Search Bar */}
                     <li className='navbar_search_container'>
                         <form>
                             <input
@@ -55,25 +53,28 @@ const Navbar = ({ handleAll, handleRandom, handleGender, name, setName, handleSe
                         </form>
                     </li>
 
-
+                    {/* Show All Option */}
                     <li className="navbar_option_container" onClick={handleClose}>
                         <div className="navbar_option" onClick={handleAll}>
-                            All Legends
+                            All
                         </div>
                     </li>
 
+                    {/* Filter for Men Option */}
                     <li className="navbar_option_container" onClick={handleClose}>
                         <div className="navbar_option" onClick={() => handleGender("male")}>
                             Men
                         </div>
                     </li>
 
+                    {/* Filter for Women Option */}
                     <li className="navbar_option_container" onClick={handleClose}>
                         <div className="navbar_option" onClick={() => handleGender("female")}>
                            Women
                         </div>    
                     </li>
 
+                    {/* Random Legend Button */}
                     <li className="navbar_random_option" onClick={handleClose}>
                         <div className="random_option_container">
                             <button className="random_option_button" onClick={handleRandom}>
@@ -82,7 +83,6 @@ const Navbar = ({ handleAll, handleRandom, handleGender, name, setName, handleSe
                         </div>
                     </li>
                 </ul>
-                       
             </div>
         </div>
     );

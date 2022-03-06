@@ -5,7 +5,9 @@
 }
 
 .biography_container {
-    display: grid;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
     z-index: 1;
     height: 600px;
     width: 100%;
@@ -16,25 +18,50 @@
     justify-content: center;
 }
 
+.biography_container_readmode {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+    justify-content: center;
+}
+
 .biography_row_image_first {
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: "col1 col2";
-
-    @media screen and (max-width: 768px) {
-            grid-template-areas: imgStart ? `'col1' 'col2'`;
-    }
+    grid-template-areas: "col2 col1";
 }
 
 .biography_row_image_last {
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: "col2 col1";
+    grid-template-areas: "col1 col2";
+}
 
-    @media screen and (max-width: 768px) {
-            grid-template-areas: imgStart ? `'col1' 'col2'`;
+@media screen and (max-width: 800px) {
+   .biography_row_image_first {
+       grid-template-areas: "col2" "col1";
+   }
+
+   .biography_row_image_last {
+       grid-template-areas: "col2" "col1";
+   }
+
+   .biography_container {
+       height: 1000px;
+       align-items: center;
+    }
+
+    .biography_container_readmode {
+       align-items: center;
     }
 }
 
@@ -79,17 +106,22 @@
     line-height: 24px;
 }
 
-.biography_image_container {
-    
+.biography_info_intro_hidden {
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+    display: none;
 }
 
 .biography_image {
     object-fit: cover;
-    width: 350px;
-    height: 400px;
+    width: 325px;
+    height: 325px;
     border-radius: 25px;
     border: 1px solid white;
     padding: 5px;
+    margin-top: 15px;
 }
 
 .biography_button {
@@ -114,4 +146,17 @@
     transition: all 0.3s ease-out;
     background: #fff;
     color: #242424;
+}
+
+.biography_read_section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.biography_paragraph {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 1100px;
 }
